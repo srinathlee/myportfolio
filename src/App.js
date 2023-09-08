@@ -1,25 +1,236 @@
-import logo from './logo.svg';
+import {FaBars,FaTwitterSquare,FaGithubSquare} from 'react-icons/fa'
+import {RxCross2} from 'react-icons/rx'
+import { useEffect, useState } from 'react'
+import {GrProjects} from 'react-icons/gr'
+import {IoIosSettings} from 'react-icons/io'
+import {PiSquaresFourBold} from 'react-icons/pi'
+import {SiShopify} from'react-icons/si'
+import {AiFillLinkedin} from 'react-icons/ai'
+import {BsArrowRight,BsArrowDownShort} from 'react-icons/bs'
+import {TfiMouse} from 'react-icons/tfi'
+import {BiSolidSchool} from 'react-icons/bi'
+import {GiSchoolBag} from 'react-icons/gi'
+import {IoIosSchool} from 'react-icons/io'
+import logo from './assets/logo.png'
+import arrow from './assets/arrow.png'
+import Lottie from "lottie-react";
+import homelottie from "./assets/homelottie.json";
+import contactlottie from "./assets/contactlottiee.json";
+import {Button} from 'react-bootstrap'
+import Projectcorousel from'./components/corousel/index.js'
+import {motion} from 'framer-motion'
+import emoji from './assets/emoji.gif'
+import AOS from 'aos'
+import { Chrono } from "react-chrono";
+import 'aos/dist/aos.css'
 import './App.css';
 
 function App() {
+  useEffect(()=>{
+  AOS.init({duration:2000})
+  },[])
+  const [menu,setMenu]=useState(false)
+  const items = [{title: '2025'}, {title: '2021'}, {title: '2019'}]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* ______________________home section______________________________ */}
+
+        <div id="homesection">
+         {/* ______________________header section____________________________ */}
+      <div className='header'>
+        <div className='nav'>
+          <div>
+             <img src={logo} className='logo'/>
+          </div>
+
+          <ul className='nav-links'>
+            <li className='nav-item'>Home</li>            
+            <li className='nav-item'>Services</li>      
+            <li className='nav-item'>Projects</li>
+          </ul>
+
+          <div className='mob-bars-profile'>
+            <div className='bars' onClick={()=>setMenu(!menu)}>
+              { menu?<RxCross2 className='bars'/>:<FaBars  />}
+            </div>
+          </div>
+        </div>
+
+        <div className={menu?"menu open":"menu"}> 
+              <div className='nav-item'>Home</div>
+              <div  className='nav-item'>Services</div>
+              <div className='nav-item'>Projects</div>
+        </div>
+
+      </div>
+      {/* ______________________header colse _____________________________*/}
+
+        <div className='main-section'>
+          <div className='column-1'>
+            <h1 data-aos="fade-right" className='main-heading'>H! I`m <span className='color-name'>SRINATH</span></h1>
+            <div className='curve-para'>
+            <img className='curve-image' src={arrow}/>
+            <div  data-aos="fade-right" className='description'>
+                 <p>A Passionated  fullstack developer  with a decent experience in designing,<br/>
+                  I bring a unique blend of creativity and technical expertise to the table
+                 </p>
+                 <p className='tagline'>_ i bring your <span className='color-name'>ideas</span> into <span className='color-name'>reality</span></p>
+            </div>
+         
+            </div>
+            <div  data-aos="fade-right" className='colab-btn-arrow'>
+                <p className='lets-colab'>Let`s Collaborate</p>
+                <BsArrowRight className='colabarrow'/>
+              </div>
+          </div>
+          <div  data-aos="fade-left" className='column-2'>
+          <Lottie className='homelottie' animationData={homelottie} loop={true} />
+          </div>
+          <div  data-aos="fade-left" className='column-3'>
+            <div className='vertical-line'></div>
+             <div className='social-icons'>
+             <AiFillLinkedin className='social-icon'/>
+             <FaTwitterSquare  className='social-icon'/>
+             <FaGithubSquare   className='social-icon'/>
+            </div>
+            <div className='vertical-line'></div>
+          </div>
+        </div>
+         <div  data-aos="fade-up" className='scroll-section'>
+           <TfiMouse className='mouse-icon'/>
+           <p className='scroll-para'>Scroll down</p>
+           <BsArrowDownShort className='downarr-icon'/>
+         </div>
+        </div>
+
+
+      {/*________________________education timeline section_________________ */}
+
+        <div className='education-section'>
+
+  <Chrono scrollable={{ scrollbar: true }} hideControls={true} theme={{
+      primary: 'red',
+      secondary: 'gray',
+      cardBgColor: 'transprant',
+      titleColor: 'black',
+      titleColorActive: 'balck',
+    }} items={items} mode="VERTICAL_ALTERNATING">
+    <div  data-aos="fade-right" className='education-card'>
+    <h1 className='education-ins-name'>MallaReddy Engineering Collage</h1>
+    <p className='ins-cource'>Computer Science And Enginneering</p>
+    <p className='ins-gpa'>CGPA : <span className='gpa'>8.1</span></p>
     </div>
-  );
+    <div  data-aos="fade-left" className='education-card'>
+    <h1 className='education-ins-name'>Narayana Junior Collage</h1>
+    <p className='ins-cource'>Intermediate (MPC)</p>
+    <p className='ins-gpa'>PERCENTAGE : <span className='gpa'>97%</span></p>
+    </div>
+    <div  data-aos="fade-right" className='education-card'>
+    <h1 className='education-ins-name'>Kakatiya High School</h1>
+    <p className='ins-cource'>Telangana State Board</p>
+    <p className='ins-gpa'>GPA : <span className='gpa'>8.5</span></p>
+    </div>
+    
+    <div className="chrono-icons">
+  <IoIosSchool className='chrono-icon'/>
+  <BiSolidSchool className='chrono-icon'/>
+  <GiSchoolBag className='chrono-icon'/>
+  </div>
+  </Chrono>
+
+        </div>
+    
+      {/*________________________project section___________________________ */}
+        
+        <div className='projectsection'>
+        <div className='header-section'>
+        <h1 className='project-section-header'>PROJECTS</h1>
+        <PiSquaresFourBold className='projecticon'/>
+        </div>
+
+        <div className='projects-container'>
+          <div className='project-container'>
+             <h1 className='project-name'>E Commerce Application</h1>
+            <div className='project-card'>
+                <Projectcorousel/>
+                <div className='project-card-description'>
+                  <div className='p-widget'>
+                    <div className='heading-and-icon'>
+                    <h1 className='p-wedget-heading'>Technologies Used</h1>
+                    <motion.p animate={{rotate:[0,360]}} transition={{repeat:Infinity,duration:1}} className='settin-icon-container'> <IoIosSettings className='seting-icon'/></motion.p>
+                    </div>
+                    <p  className='p-wedget-para'>React Js , Node Js , Express Js , MongoDb , Zustand</p>
+
+                  </div>
+                
+                   <div>
+                  <h1 className='project-description-heading'>Description</h1>
+                  <p className='project-description'>Built with cutting-edge technologies like React.js, Node.js, MongoDB, Express.js, and CSS, this Application offers a seamless and secure shopping experience,users can easily find the products that they like and can add to cart ,Shop like a pro, explore diverse categories, and enjoy a seamless, Amazon and Flipkart-inspired shopping experience. </p>
+      
+                   </div>
+                   <div className='project-link-container'>
+                   <p><a className='project-link' href='https://srinathshop.netlify.app/' target='_blank'>click!</a> here for the project view</p>
+                   </div>
+                </div>
+            </div>
+          </div>
+
+
+          <div className='project-container'>
+             <h1 className='project-name'>Game-Based Application</h1>
+            <div className='project-card'>
+            <img className='emoji-gif' src={emoji}/>
+                <div className='project-card-description'>
+                  <div className='p-widget'>
+                    <div className='heading-and-icon'>
+                    <h1 className='p-wedget-heading'>Technologies Used</h1>
+                    <motion.p animate={{rotate:[0,360]}} transition={{repeat:Infinity,duration:1}} className='settin-icon-container'> <IoIosSettings className='seting-icon'/></motion.p>
+                    </div>
+                    <p  className='p-wedget-para'>React Js , CSS , Node Js , Express Js </p>
+
+                  </div>
+                
+                   <div>
+                  <h1 className='project-description-heading'>Description</h1>
+                  <p className='project-description'>Built with cutting-edge technologies like React.js, Node.js, MongoDB, Express.js, and CSS, this Application offers a seamless and secure shopping experience,users can easily find the products that they like and can add to cart ,Shop like a pro, explore diverse categories, and enjoy a seamless, Amazon and Flipkart-inspired shopping experience. </p>
+         
+                   </div>
+                   <p><a className='project-link' href='https://srinathemoji.ccbp.tech/' target='_blank'>click!</a> here for the project view</p>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+
+
+      {/*________________________Contact form _______________________________ */}
+
+      <div className='contact-form-container'>
+
+        <h1 className='contact-form-heading'>Let`<span className='s-letter'>s</span> Collaborate</h1>
+      <div className='contact-main-bg'>
+
+      <form data-aos="fade-right" className='contact-form'>
+          <input className='widget-1' type="text" placeholder='Enter Your Name'/>
+          <input className='widget-1' type='email' placeholder='Enter Your Email'/>
+          <textarea className='widget-2' placeholder='A Short description of your project.....'/>
+          <input className='contact-button' type="submit"/>
+         
+        </form>
+        <div  data-aos="fade-left" className='contact-lottie'>
+          <Lottie className='contactlottie' animationData={contactlottie} loop={true} />
+          </div>
+
+      </div>
+
+      </div>
+  
+      </div>
+     );
 }
 
 export default App;
