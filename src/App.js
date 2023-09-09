@@ -12,20 +12,27 @@ import {BiSolidSchool} from 'react-icons/bi'
 import {GiSchoolBag} from 'react-icons/gi'
 import {IoIosSchool} from 'react-icons/io'
 import logo from './assets/logo.png'
+import whatsapplogo from './assets/WhatsApp.svg.webp'
 import arrow from './assets/arrow.png'
 import Lottie from "lottie-react";
 import homelottie from "./assets/homelottie.json";
+import servicelottie from "./assets/servicelottie.json";
 import contactlottie from "./assets/contactlottiee.json";
+import homelott from "./assets/serviceslloott.json";
 import {Button} from 'react-bootstrap'
 import Projectcorousel from'./components/corousel/index.js'
 import {motion} from 'framer-motion'
 import emoji from './assets/emoji.gif'
 import AOS from 'aos'
 import { Chrono } from "react-chrono";
+import Marquee from "react-fast-marquee";
+import frontend from './assets/front-end.png'
+import ReactWhatsapp from 'react-whatsapp';
 import 'aos/dist/aos.css'
 import './App.css';
 
 function App() {
+  
   useEffect(()=>{
   AOS.init({duration:2000})
   },[])
@@ -206,6 +213,79 @@ function App() {
 
         </div>
 
+        {/*________________________skill and services___________________________ */}
+
+        <div className='skill-service-container'>
+          
+             <Lottie className='servicelottie' animationData={servicelottie} loop={true} />
+             <Marquee autoFill={true} className='marque-container' >
+ <div className='service-card'>
+  <img className='service-img' src={frontend}/>
+  <h1 className='service-heading'>FRONTEND</h1>
+  <hr className='horizontal-line-skill'/>
+  <ul className='skill-container'>
+    <li className='skill'>ReactJs</li>
+    <li className='skill'>JavaScript</li>
+    <li className='skill'>Css</li>
+    <li className='skill'>BootStrap</li>
+  </ul>
+  </div>
+
+  <div className='service-card'>
+  <img className='service-img' src={frontend}/>
+  <h1 className='service-heading'>UI/UX DESIGN</h1>
+  <hr className='horizontal-line-skill'/>
+  <ul className='skill-container'>
+    <li className='skill'>Figma</li>
+    <li className='skill'>Prototyping</li>
+           
+  </ul>
+  </div>
+
+  <div className='service-card'>
+  <img className='service-img' src={frontend}/>
+  <h1 className='service-heading'>FRONTEND</h1>
+  <hr className='horizontal-line-skill'/>
+  <ul className='skill-container'>
+    <li className='skill'>ReactJs</li>
+    <li className='skill'>JavaScript</li>
+    <li className='skill'>Css</li>
+    <li className='skill'>BootStrap</li>
+  </ul>
+  </div>
+
+  <div className='service-card'>
+  <img className='service-img' src={frontend}/>
+  <h1 className='service-heading'>BACKEND</h1>
+  <hr className='horizontal-line-skill'/>
+  <ul className='skill-container'>
+    <li className='skill'>NodeJs</li>
+    <li className='skill'>JavaScript</li>
+    <li className='skill'>ExpressJs</li>
+  </ul>
+  </div>
+
+  <div className='service-card'>
+  <img className='service-img' src={frontend}/>
+  <h1 className='service-heading'>DATABASE</h1>
+  <hr className='horizontal-line-skill'/>
+  <ul className='skill-container'>
+    <li className='skill'>MongoDB</li>
+    <li className='skill'>MySql</li>
+  </ul>
+  </div>
+ 
+
+
+             </Marquee>
+
+             {/* <Lottie className='homeservecicehott' animationData={homelott} loop={true} /> */}
+
+
+
+
+        </div>
+
 
       {/*________________________Contact form _______________________________ */}
 
@@ -213,21 +293,26 @@ function App() {
 
         <h1 className='contact-form-heading'>Let`<span className='s-letter'>s</span> Collaborate</h1>
       <div className='contact-main-bg'>
+      <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/></ReactWhatsapp>
 
-      <form data-aos="fade-right" className='contact-form'>
+      <form  className='contact-form'>
           <input className='widget-1' type="text" placeholder='Enter Your Name'/>
           <input className='widget-1' type='email' placeholder='Enter Your Email'/>
           <textarea className='widget-2' placeholder='A Short description of your project.....'/>
           <input className='contact-button' type="submit"/>
          
         </form>
-        <div  data-aos="fade-left" className='contact-lottie'>
+        <div  className='contact-lottie'>
           <Lottie className='contactlottie' animationData={contactlottie} loop={true} />
           </div>
 
       </div>
 
       </div>
+
+
+
+
   
       </div>
      );

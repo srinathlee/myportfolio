@@ -4,7 +4,7 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    list-style-type: none;
+
 }
 .App{
   background-color:#EFF2F1;
@@ -383,6 +383,7 @@ transform: scale(1.015);
   margin: 0 auto;
   padding:0 2rem; 
   padding-top: 20px;
+  
 
 }
 
@@ -400,6 +401,7 @@ transform: scale(1.015);
 .contact-main-bg{
   display: flex;
   align-items: center;
+  position: relative;
 
 }
 .widget-1{
@@ -424,11 +426,70 @@ transform: scale(1.015);
 }
 .contact-button{
   width:90%;
-  background-color: #fe4a49;
-  border:none;
+  border:1px solid #fe4a49;
+  background-color: transparent;
+  /* border:none; */
   border-radius: 5px;
   height:60px;
   padding:10px;
   outline: none;
   margin-bottom: 10px;
+}
+.whatsapp{
+  width:50px;
+  height:50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 10px;
+  left: 20%;
+}
+.whatsapplogo{
+  width:50px;
+  height:50px;
+}
+.skill-service-container{
+  height:50vh;
+  width:100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding:0 2rem; 
+  padding-top: 20px; 
+  margin-bottom: 30px;
+}
+.service-card{
+  border: 0.3px solid gray;
+  padding: 10px;
+  width:200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 70px;
+  height:250px;
+}
+.service-img{
+  width:50px;
+}
+.service-heading{
+  font-size: 20px;
+  font-weight: bold;
+}
+.horizontal-line-skill{
+width:150px;
+color:gray;
+}
+.skill-container{
+  list-style-type: disc;
+  color:gray;
+}
+.marque-container{
+  display: flex;
+  justify-content: space-around;
+  width:100%
+}
+.servicelottie{
+  width:200px;
+  margin-bottom: 20px;
 }
