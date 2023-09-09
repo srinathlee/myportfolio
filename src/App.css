@@ -644,9 +644,8 @@ transform: scale(1.015);
   margin: 0 auto;
   padding:0 2rem; 
   padding-top: 20px;
-  
-
-}
+  position: relative;
+  }
 
 .s-letter{
   color: #fe4a49;
@@ -658,11 +657,12 @@ transform: scale(1.015);
   display: flex;
   flex-direction:column;
   width:50%;
+
 }
 .contact-main-bg{
   display: flex;
   align-items: center;
-  position: relative;
+
 
 }
 .widget-1{
@@ -704,7 +704,7 @@ transform: scale(1.015);
   outline: none;
   position: absolute;
   bottom: 10px;
-  left: 20%;
+  right: 0px;
 }
 .whatsapplogo{
   width:50px;
@@ -714,6 +714,9 @@ transform: scale(1.015);
   list-style-type: none;
 }
 @media(max-width:460px){
+  .contact-form{
+  margin-bottom: 50px;
+  }
   .contact-lottie{
     display: none;
   }
@@ -732,6 +735,12 @@ transform: scale(1.015);
   .contact-form-container{
     height:auto;
     margin-bottom: 30px;
+  }
+}
+@media(max-width:1240){
+  .whatsapp{
+    bottom: 0px;
+    left: 0px;
   }
 }
 

@@ -29,16 +29,36 @@ import Headroom from 'react-headroom'
 import Marquee from "react-fast-marquee";
 import frontend from './assets/front-end.png'
 import ReactWhatsapp from 'react-whatsapp';
+import emailjs from 'emailjs-com';
 import 'aos/dist/aos.css'
 import './App.css';
 
 function App() {
-  
+
+
   useEffect(()=>{
   AOS.init({duration:2000})
   },[])
   const [menu,setMenu]=useState(false)
   const items = [{title: '2025'}, {title: '2021'}, {title: '2019'}]
+
+  // ________________send email____________________________
+  
+  const sendEmail = (e) => {
+    console.log("tirggred")
+    e.preventDefault();
+
+    emailjs.sendForm('service_2rehi2a', 'template_sil9hdi', e.target, '0b_LGtdnHOs-LQmmG')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target=""
+      // e.terget.reset()
+  };
+
+  
 
   return (
     <div className="App">
@@ -303,10 +323,10 @@ function App() {
         <div className='contact-main-bg'>
         <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/></ReactWhatsapp>
 
-        <form  className='contact-form'>
-          <input className='widget-1' type="text" placeholder='Enter Your Name'/>
-          <input className='widget-1' type='email' placeholder='Enter Your Email'/>
-          <textarea className='widget-2' placeholder='A Short description of your project.....'/>
+        <form  onSubmit={sendEmail} className='contact-form'>
+          <input name="name" className='widget-1' type="text" placeholder='Enter Your Name'/>
+          <input name="email" className='widget-1' type='email' placeholder='Enter Your Email'/>
+          <textarea name="message" className='widget-2' placeholder='A Short description of your project.....'/>
           <input className='contact-button' type="submit"/> 
         </form>
 
