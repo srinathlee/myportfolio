@@ -25,6 +25,7 @@ import {motion} from 'framer-motion'
 import emoji from './assets/emoji.gif'
 import AOS from 'aos'
 import { Chrono } from "react-chrono";
+import Headroom from 'react-headroom'
 import Marquee from "react-fast-marquee";
 import frontend from './assets/front-end.png'
 import ReactWhatsapp from 'react-whatsapp';
@@ -46,16 +47,18 @@ function App() {
 
         <div id="homesection">
          {/* ______________________header section____________________________ */}
-      <div className='header'>
+    <Headroom className='headroom-container'>
+    <div className='header'>
         <div className='nav'>
           <div>
              <img src={logo} className='logo'/>
           </div>
 
           <ul className='nav-links'>
-            <li className='nav-item'>Home</li>            
-            <li className='nav-item'>Services</li>      
-            <li className='nav-item'>Projects</li>
+            <li className='nav-item'><a className='linkitem' href='#homesection'>Home</a></li>            
+            <li className='nav-item'><a className='linkitem'  href='#skillsection'>Services</a></li>      
+            <li className='nav-item'><a className='linkitem'  href='#projectsection'>Projects</a></li>
+            <li className='nav-item'><a className='linkitem'  href='#educationsection'>Education</a></li>
           </ul>
 
           <div className='mob-bars-profile'>
@@ -66,12 +69,17 @@ function App() {
         </div>
 
         <div className={menu?"menu open":"menu"}> 
-              <div className='nav-item'>Home</div>
-              <div  className='nav-item'>Services</div>
-              <div className='nav-item'>Projects</div>
+              <div className='nav-item'> <a  className='linkitem'  href='#homesection'>Home</a></div>
+              <div  className='nav-item'><a  className='linkitem'  href='#skillsection'>Services</a></div>
+              <div className='nav-item'><a className='linkitem'  href='#projectsection'>Projects</a></div>
+              <div className='nav-item'><a className='linkitem'  href='#educationsection'>Education</a></div>
+             
+
+
         </div>
 
       </div>
+    </Headroom>
       {/* ______________________header colse _____________________________*/}
 
         <div className='main-section'>
@@ -80,7 +88,7 @@ function App() {
             <div className='curve-para'>
             <img className='curve-image' src={arrow}/>
             <div  data-aos="fade-right" className='description'>
-                 <p>A Passionated  fullstack developer  with a decent experience in designing,<br/>
+                 <p className='description-para'>A Passionated  fullstack developer  with a decent experience in designing,<br/>
                   I bring a unique blend of creativity and technical expertise to the table
                  </p>
                  <p className='tagline'>_ i bring your <span className='color-name'>ideas</span> into <span className='color-name'>reality</span></p>
@@ -88,8 +96,8 @@ function App() {
          
             </div>
             <div  data-aos="fade-right" className='colab-btn-arrow'>
-                <p className='lets-colab'>Let`s Collaborate</p>
-                <BsArrowRight className='colabarrow'/>
+                <p className='lets-colab'><a className='contact-link-colab' href='#contactsection'>Let`s Collaborate</a></p>
+                <a href='#contactsection'><BsArrowRight className='colabarrow'/></a>
               </div>
           </div>
           <div  data-aos="fade-left" className='column-2'>
@@ -98,9 +106,9 @@ function App() {
           <div  data-aos="fade-left" className='column-3'>
             <div className='vertical-line'></div>
              <div className='social-icons'>
-             <AiFillLinkedin className='social-icon'/>
-             <FaTwitterSquare  className='social-icon'/>
-             <FaGithubSquare   className='social-icon'/>
+              <a className='social-icon-link' href="https://www.linkedin.com/in/srinathb5255/" target="blank"> <AiFillLinkedin className='social-icon'/></a>
+              <a className='social-icon-link' href="https://twitter.com/srinath5255/" target="blank"> <FaTwitterSquare  className='social-icon'/></a>
+              <a className='social-icon-link' href="https://github.com/srinathlee" target="blank"><FaGithubSquare   className='social-icon'/></a>
             </div>
             <div className='vertical-line'></div>
           </div>
@@ -115,7 +123,7 @@ function App() {
 
       {/*________________________education timeline section_________________ */}
 
-        <div className='education-section'>
+        <div id="educationsection" className='education-section'>
 
   <Chrono scrollable={{ scrollbar: true }} hideControls={true} theme={{
       primary: 'red',
@@ -151,7 +159,7 @@ function App() {
     
       {/*________________________project section___________________________ */}
         
-        <div className='projectsection'>
+        <div id="projectsection" className='projectsection'>
         <div className='header-section'>
         <h1 className='project-section-header'>PROJECTS</h1>
         <PiSquaresFourBold className='projecticon'/>
@@ -215,7 +223,7 @@ function App() {
 
         {/*________________________skill and services___________________________ */}
 
-        <div className='skill-service-container'>
+        <div id="skillsection" className='skill-service-container'>
           
              <Lottie className='servicelottie' animationData={servicelottie} loop={true} />
              <Marquee autoFill={true} className='marque-container' >
@@ -289,7 +297,7 @@ function App() {
 
       {/*________________________Contact form _______________________________ */}
 
-      <div className='contact-form-container'>
+      <div id="contactsection" className='contact-form-container'>
 
         <h1 className='contact-form-heading'>Let`<span className='s-letter'>s</span> Collaborate</h1>
       <div className='contact-main-bg'>
@@ -307,6 +315,25 @@ function App() {
           </div>
 
       </div>
+
+      </div>
+
+      {/* ________________________footer section ____________________________ */}
+
+      <div className='footer-section'>
+           <div className='footer-social-icons'>
+           <a className='footer-social-icon-link' href="https://www.linkedin.com/in/srinathb5255/" target="blank">
+           <AiFillLinkedin className='insicon footer-icon social-icon'/> </a>
+           
+           <a className='footer-social-icon-link' href="https://twitter.com/srinath5255/" target="blank">
+           <FaTwitterSquare  className='footer-icon social-icon'/> </a>
+           
+           <a className='footer-social-icon-link' href="https://github.com/srinathlee" target="blank">
+           <FaGithubSquare   className='footer-icon social-icon'/> </a>
+             
+             
+            </div>
+            <p>© 2023 Copyright: srinathportfolio.com</p>
 
       </div>
 
