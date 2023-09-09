@@ -421,7 +421,6 @@ width:60px;
 }
 /* __________________Project section___________________________ */
 .projectsection{
-  height:100vh;
   width:100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -465,6 +464,7 @@ width:60px;
   font-weight: lighter;
 }
 .project-container{
+  width:100%;
   margin-top: 20px;
   transition:  transform 1s ;
 }
@@ -479,7 +479,6 @@ transform: scale(1.015);
 }
 .p-wedget-para{
   font-size: 12px;
-
 }
 .seting-icon{
   font-size: 25px;
@@ -528,6 +527,7 @@ transform: scale(1.015);
   border-top-right-radius: 10px;
 }
 .projects-container{
+  width:100%;
   display: flex;
   justify-content: space-between;
 }
@@ -536,6 +536,72 @@ transform: scale(1.015);
   color: #fe4a49;
   font-weight: bold;
 }
+@media(max-width:1000px){
+  .project-name{
+    font-size: 20px;
+  }
+  .project-description-heading{
+    font-size: 20px;
+  }
+  .project-description{
+    font-size: 12px;
+  }
+  .click-para{
+    font-size: 14px;
+  }
+
+}
+
+@media(max-width:850px){
+  .project-name{
+    font-size: 18px;
+  }
+  .project-description-heading{
+    font-size: 20px;
+  }
+  .project-description{
+    font-size: 10px;
+  }
+  .p-wedget-para{
+    font-size:12px;
+  }
+  .click-para{
+    font-size: 12px;
+  }
+}
+
+@media(max-width:680px){
+  .project-name{
+    font-size: 14px;
+  }
+  .project-description-heading{
+    font-size: 18px;
+  }
+  .project-description{
+    font-size: 10px;
+  }
+  .p-wedget-para{
+    font-size:12px;
+  }
+  .click-para{
+    font-size: 12px;
+  }
+
+}
+@media(max-width:680px){
+
+  .projects-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .project-card{
+    width:100%;
+  }
+
+  }
 
 /* ________________________________________Education section___________________________________ */
 .education-section{
@@ -647,15 +713,37 @@ transform: scale(1.015);
 .nav-links .nav-item{
   list-style-type: none;
 }
+@media(max-width:460px){
+  .contact-lottie{
+    display: none;
+  }
+  .contact-form{
+    width:100%;
+  }
+  .widget-1{
+    width:100%;
+  }
+  .widget-2{
+    width:100%;
+  }
+  .contact-button{
+    width:100%;
+  }
+  .contact-form-container{
+    height:auto;
+    margin-bottom: 30px;
+  }
+}
 
 /* ___________________________________skill and service container_________________________________ */
 .skill-service-container{
+  /* padding-top: 310px; */
   height:50vh;
   width:100%;
   max-width: 1400px;
   margin: 0 auto;
   padding:0 2rem; 
-  padding-top: 20px; 
+  padding-top: 50px; 
   margin-bottom: 30px;
 }
 .service-card{

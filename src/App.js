@@ -186,7 +186,7 @@ function App() {
       
                    </div>
                    <div className='project-link-container'>
-                   <p><a className='project-link' href='https://srinathshop.netlify.app/' target='_blank'>click!</a> here for the project view</p>
+                   <p className='click-para'><a className='project-link' href='https://srinathshop.netlify.app/' target='_blank'>click!</a> here for the project view</p>
                    </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ function App() {
                   <p className='project-description'>Built with cutting-edge technologies like React.js, Node.js, MongoDB, Express.js, and CSS, this Application offers a seamless and secure shopping experience,users can easily find the products that they like and can add to cart ,Shop like a pro, explore diverse categories, and enjoy a seamless, Amazon and Flipkart-inspired shopping experience. </p>
          
                    </div>
-                   <p><a className='project-link' href='https://srinathemoji.ccbp.tech/' target='_blank'>click!</a> here for the project view</p>
+                   <p  className='click-para'><a className='project-link' href='https://srinathemoji.ccbp.tech/' target='_blank'>click!</a> here for the project view</p>
                 </div>
             </div>
           </div>
@@ -300,16 +300,16 @@ function App() {
       <div id="contactsection" className='contact-form-container'>
 
         <h1 className='contact-form-heading'>Let`<span className='s-letter'>s</span> Collaborate</h1>
-      <div className='contact-main-bg'>
-      <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/></ReactWhatsapp>
+        <div className='contact-main-bg'>
+        <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/></ReactWhatsapp>
 
-      <form  className='contact-form'>
+        <form  className='contact-form'>
           <input className='widget-1' type="text" placeholder='Enter Your Name'/>
           <input className='widget-1' type='email' placeholder='Enter Your Email'/>
           <textarea className='widget-2' placeholder='A Short description of your project.....'/>
-          <input className='contact-button' type="submit"/>
-         
+          <input className='contact-button' type="submit"/> 
         </form>
+
         <div  className='contact-lottie'>
           <Lottie className='contactlottie' animationData={contactlottie} loop={true} />
           </div>
