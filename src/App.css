@@ -702,16 +702,38 @@ transform: scale(1.015);
   background-color: transparent;
   border: none;
   outline: none;
-  position: absolute;
-  bottom: 10px;
-  right: 0px;
+  /* position: absolute; */
+  /* bottom: 10px;
+  right: 0px; */
 }
 .whatsapplogo{
-  width:50px;
-  height:50px;
+  width:35px;
+  height:35px;
 }
 .nav-links .nav-item{
   list-style-type: none;
+}
+.whatsapp-container{
+  bottom: 5%;
+  right: 3%;
+  position: fixed;
+  height:50px;
+  width:120px;
+  border-radius: 25px;
+  background-color: #25d366;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+/* padding:10px; */
+z-index: 9999;
+}
+.whatsapp-para{
+  font-size: 10px;
+  color:white;
+  padding-top: 17px;
+  padding-right: 2px;
+  text-align: center;
 }
 @media(max-width:460px){
   .contact-form{
@@ -737,12 +759,12 @@ transform: scale(1.015);
     margin-bottom: 30px;
   }
 }
-@media(max-width:1240){
+/* @media(max-width:1240){
   .whatsapp{
     bottom: 0px;
     left: 0px;
   }
-}
+} */
 
 /* ___________________________________skill and service container_________________________________ */
 .skill-service-container{

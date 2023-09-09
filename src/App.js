@@ -321,7 +321,10 @@ function App() {
 
         <h1 className='contact-form-heading'>Let`<span className='s-letter'>s</span> Collaborate</h1>
         <div className='contact-main-bg'>
+        <div className='whatsapp-container'>
         <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/></ReactWhatsapp>
+        <p className='whatsapp-para'>Chat with Me!</p>
+        </div>
 
         <form  onSubmit={sendEmail} className='contact-form'>
           <input name="name" className='widget-1' type="text" placeholder='Enter Your Name'/>
