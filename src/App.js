@@ -119,6 +119,7 @@ function App() {
                 <p className='lets-colab'><a className='contact-link-colab' href='#contactsection'>Let`s Collaborate</a></p>
                 <a href='#contactsection'><BsArrowRight className='colabarrow'/></a>
               </div>
+      
           </div>
           <div  data-aos="fade-left" className='column-2'>
           <Lottie className='homelottie' animationData={homelottie} loop={true} />
@@ -322,8 +323,8 @@ function App() {
         <h1 className='contact-form-heading'>Let`<span className='s-letter'>s</span> Collaborate</h1>
         <div className='contact-main-bg'>
         <div className='whatsapp-container'>
-        <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/></ReactWhatsapp>
-        <p className='whatsapp-para'>Chat with Me!</p>
+        <ReactWhatsapp  className='whatsapp' number="6301912774" message="Hello World!!!" ><img className='whatsapplogo' src={whatsapplogo}/> <p className='whatsapp-para'>Chat with Me!</p></ReactWhatsapp>
+        
         </div>
 
         <form  onSubmit={sendEmail} className='contact-form'>

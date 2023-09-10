@@ -37,6 +37,7 @@ width:60px;
     flex-direction: row;
     gap:2rem;
     align-items: center;
+    margin-bottom: 0px;
 }
  
 .nav-item{
@@ -260,16 +261,19 @@ width:60px;
 
 @media(max-width:1280px){
   .column-1{
-    width:55%;
+    width:60%;
   }
   .main-heading{
     font-size: 60px;
   }
   .description-para{
-    font-size: 12px;
+    font-size: 14px;
   }
   .tagline{
     font-size: 12px;
+  }
+  .description{
+    margin-bottom: 20px;
   }
   .column-2{
     width:40%;
@@ -282,8 +286,8 @@ width:60px;
   width:400px;
 }
 .curve-image{
-  width:70px;
-  height:70px;
+  width:80px;
+  height:80px;
 }
 .lets-colab{
   font-size: 12px;
@@ -298,6 +302,9 @@ width:60px;
 @media(max-width:850px){
   .column-1{
     width:50%;
+  }
+  .description{
+    margin-bottom: 0px;
   }
   .main-heading{
     font-size: 50px;
@@ -419,6 +426,22 @@ width:60px;
     height:50px;
   }
 }
+
+@media(max-width:460px){
+  .column-1{
+    width:90%;
+  }
+  .curve-image{
+    width:40px;
+    height:50px;
+  }
+  .description{
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+
+
+}
 /* __________________Project section___________________________ */
 .projectsection{
   width:100%;
@@ -536,6 +559,9 @@ transform: scale(1.015);
   color: #fe4a49;
   font-weight: bold;
 }
+.projectsection{
+  margin-top: 30px;
+}
 @media(max-width:1000px){
   .project-name{
     font-size: 20px;
@@ -574,6 +600,11 @@ transform: scale(1.015);
   .project-name{
     font-size: 14px;
   }
+  .project-container{
+    margin-bottom: 30px;
+
+  }
+
   .project-description-heading{
     font-size: 18px;
   }
@@ -595,17 +626,21 @@ transform: scale(1.015);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top:0px;
   }
 
   .project-card{
     width:100%;
+  }
+  .projectsection{
+    margin-top: 30px;
   }
 
   }
 
 /* ________________________________________Education section___________________________________ */
 .education-section{
-  height:100vh;
+  /* height:100vh; */
   width:100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -697,14 +732,19 @@ transform: scale(1.015);
   margin-bottom: 10px;
 }
 .whatsapp{
-  width:50px;
-  height:50px;
+  /* width:50px;
+  height:50px; */
   background-color: transparent;
   border: none;
   outline: none;
   /* position: absolute; */
   /* bottom: 10px;
   right: 0px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 .whatsapplogo{
   width:35px;
@@ -731,8 +771,9 @@ z-index: 9999;
 .whatsapp-para{
   font-size: 10px;
   color:white;
-  padding-top: 17px;
-  padding-right: 2px;
+  margin-bottom: 0px;
+  /* padding-top: 17px;
+  padding-right: 2px; */
   text-align: center;
 }
 @media(max-width:460px){
