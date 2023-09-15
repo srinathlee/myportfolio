@@ -226,7 +226,7 @@ width:60px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* margin-bottom: 100px; */
+  margin-bottom: 50px;
 }
 .mouse-icon{
   font-size: 20px;
@@ -455,10 +455,17 @@ width:60px;
 
 
 }
+@media(max-width:400px){
+  .column-2{
+    position: absolute;
+    bottom: 70px;
+  }
+
+}
 @media(max-width:380px){
   .column-2{
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     width:200px;
   }
 }
