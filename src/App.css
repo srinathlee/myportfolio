@@ -376,6 +376,10 @@ width:60px;
 
 }
 @media(max-width:700px){
+  .curve-image{
+    width:80px;
+    height:80px;
+  }
   .main-section{
    position: relative;
   }
@@ -409,30 +413,31 @@ width:60px;
 }
 @media(max-width:460px){
 
-  .column-2{
+  /* .column-2{
     bottom: 40px;
   }
   .social-icon{
     font-size: 18px;
     margin-bottom: 40px;
   
-  }
-  .vertical-line{
+  } */
+  /* .vertical-line{
     border-left: 1px solid #d9d9d9;
-  }
+  } */
   .column-1{
     width:90%;
   }
-  .description-para{
+  /* .description-para{
     font-size: 10px;
   }
   .tagline{
     font-size: 9px;
-  }  
-  .curve-image{
+  } 
+  */ 
+  /* .curve-image{
     width:50px;
     height:50px;
-  }
+  }  */
 }
 
 @media(max-width:460px){
@@ -440,8 +445,8 @@ width:60px;
     width:90%;
   }
   .curve-image{
-    width:40px;
-    height:50px;
+    width:70px;
+    height:70px;
   }
   .description{
     margin-top: 20px;
@@ -450,6 +455,14 @@ width:60px;
 
 
 }
+@media(max-width:380px){
+  .column-2{
+    position: absolute;
+    bottom: 50px;
+    width:200px;
+  }
+}
+
 /* __________________Project section___________________________ */
 .projectsection{
   width:100%;
