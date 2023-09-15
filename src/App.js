@@ -30,6 +30,8 @@ import Marquee from "react-fast-marquee";
 import frontend from './assets/front-end.png'
 import ReactWhatsapp from 'react-whatsapp';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'aos/dist/aos.css'
 import './App.css';
 
@@ -42,11 +44,29 @@ function App() {
   const [menu,setMenu]=useState(false)
   const items = [{title: '2025'}, {title: '2021'}, {title: '2019'}]
 
+
+  // on blur _______________________________________________
+
+   const nameblur=(e)=>{
+      if(e.target.value==""){
+
+      }
+   }
+
+
+
+
   // ________________send email____________________________
   
   const sendEmail = (e) => {
     console.log("tirggred")
     e.preventDefault();
+
+    if(e.target.email.value==="" || e.target.name.value==="" || e.target.message.value==="" ){
+           toast.warn("fill the details")
+       }
+
+    else{
 
     emailjs.sendForm('service_2rehi2a', 'template_sil9hdi', e.target, '0b_LGtdnHOs-LQmmG')
       .then((result) => {
@@ -54,15 +74,19 @@ function App() {
       }, (error) => {
           console.log(error.text);
       });
-      e.target=""
-      // e.terget.reset()
+      
+    e.target.name.value=""
+    e.target.email.value=""
+    e.target.message.value=""
+    toast.success("mail sent successfully")
+    }
   };
 
   
 
   return (
     <div className="App">
-
+   <ToastContainer/>
       {/* ______________________home section______________________________ */}
 
         <div id="homesection">
@@ -89,10 +113,10 @@ function App() {
         </div>
 
         <div className={menu?"menu open":"menu"}> 
-              <div className='nav-item'> <a  className='linkitem'  href='#homesection'>Home</a></div>
-              <div  className='nav-item'><a  className='linkitem'  href='#skillsection'>Services</a></div>
-              <div className='nav-item'><a className='linkitem'  href='#projectsection'>Projects</a></div>
-              <div className='nav-item'><a className='linkitem'  href='#educationsection'>Education</a></div>
+              <div  onClick={()=>setMenu(!menu)} className='nav-item'> <a  className='linkitem'  href='#homesection'>Home</a></div>
+              <div  onClick={()=>setMenu(!menu)} className='nav-item'><a  className='linkitem'  href='#skillsection'>Services</a></div>
+              <div onClick={()=>setMenu(!menu)} className='nav-item'><a className='linkitem'  href='#projectsection'>Projects</a></div>
+              <div  onClick={()=>setMenu(!menu)} className='nav-item'><a className='linkitem'  href='#educationsection'>Education</a></div>
              
 
 
@@ -134,7 +158,7 @@ function App() {
             <div className='vertical-line'></div>
           </div>
         </div>
-         <div  data-aos="fade-up" className='scroll-section'>
+         <div className='scroll-section'>
            <TfiMouse className='mouse-icon'/>
            <p className='scroll-para'>Scroll down</p>
            <BsArrowDownShort className='downarr-icon'/>
@@ -328,7 +352,7 @@ function App() {
         </div>
 
         <form  onSubmit={sendEmail} className='contact-form'>
-          <input name="name" className='widget-1' type="text" placeholder='Enter Your Name'/>
+          <input onBlur={nameblur} name="name" className='widget-1' type="text" placeholder='Enter Your Name'/>
           <input name="email" className='widget-1' type='email' placeholder='Enter Your Email'/>
           <textarea name="message" className='widget-2' placeholder='A Short description of your project.....'/>
           <input className='contact-button' type="submit"/> 
