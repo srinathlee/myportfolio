@@ -28,6 +28,9 @@ import { Chrono } from "react-chrono";
 import Headroom from 'react-headroom'
 import Marquee from "react-fast-marquee";
 import frontend from './assets/front-end.png'
+import backend from './assets/backend.png'
+import design from './assets/design.png'
+import database from './assets/database-storage.png'
 import ReactWhatsapp from 'react-whatsapp';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
@@ -285,7 +288,7 @@ function App() {
   </div>
 
   <div className='service-card'>
-  <img className='service-img' src={frontend}/>
+  <img className='service-img' src={design}/>
   <h1 className='service-heading'>UI/UX DESIGN</h1>
   <hr className='horizontal-line-skill'/>
   <ul className='skill-container'>
@@ -295,20 +298,10 @@ function App() {
   </ul>
   </div>
 
-  <div className='service-card'>
-  <img className='service-img' src={frontend}/>
-  <h1 className='service-heading'>FRONTEND</h1>
-  <hr className='horizontal-line-skill'/>
-  <ul className='skill-container'>
-    <li className='skill'>ReactJs</li>
-    <li className='skill'>JavaScript</li>
-    <li className='skill'>Css</li>
-    <li className='skill'>BootStrap</li>
-  </ul>
-  </div>
+
 
   <div className='service-card'>
-  <img className='service-img' src={frontend}/>
+  <img className='service-img' src={backend}/>
   <h1 className='service-heading'>BACKEND</h1>
   <hr className='horizontal-line-skill'/>
   <ul className='skill-container'>
@@ -318,8 +311,9 @@ function App() {
   </ul>
   </div>
 
+
   <div className='service-card'>
-  <img className='service-img' src={frontend}/>
+  <img className='service-img' src={database}/>
   <h1 className='service-heading'>DATABASE</h1>
   <hr className='horizontal-line-skill'/>
   <ul className='skill-container'>

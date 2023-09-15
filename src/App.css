@@ -127,7 +127,7 @@ width:60px;
 }
 #homesection{
  
-  height:100vh;
+  /* height:100vh; */
   width:100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -198,7 +198,7 @@ width:60px;
 }
 .vertical-line{
   border-left: 2px solid #d9d9d9;
-  height:30vh;
+  height:35vh;
   border-radius: 5px;
 }
 .social-icons{
@@ -477,6 +477,7 @@ width:60px;
 .project-card{
   background-color: #d9d9d9;
   width:90%;
+  /* height:85vh; */
   padding:20px;
   border-radius: 20px;
   /* box-shadow: 4px 2px 2px 1px #d9d9d9; */
@@ -485,7 +486,7 @@ width:60px;
 .project-card-description{
   background-color:white;
   border-radius: 10px;
-  height:40vh;
+  /* height:40vh; */
   margin-top: 20px;
   padding: 20px;
 }
@@ -582,6 +583,10 @@ transform: scale(1.015);
   }
   .click-para{
     font-size: 14px;
+  }
+  .p-wedget-para{
+    font-size:10px
+    /* margn; */
   }
 
 }
@@ -681,7 +686,7 @@ transform: scale(1.015);
 /* ___________________________________________contact container______________________________ */
 
 .contact-form-container{
-  height:100vh;
+  /* height:100vh; */
   width:100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -824,7 +829,7 @@ z-index: 9999;
 /* ___________________________________skill and service container_________________________________ */
 .skill-service-container{
   /* padding-top: 310px; */
-  height:50vh;
+  /* height:50vh; */
   width:100%;
   max-width: 1400px;
   margin: 0 auto;
