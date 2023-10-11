@@ -17,6 +17,10 @@ Body::-webkit-scrollbar {
     position: relative;
   
 }
+.scrollottie{
+  height:40px;
+  padding-bottom: 10px;
+}
 
 .nav{
     /* background-color: #d9d9d9; */
@@ -226,7 +230,8 @@ width:60px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
 }
 .mouse-icon{
   font-size: 20px;
@@ -234,6 +239,7 @@ width:60px;
 .scroll-para{
   font-size: 15px;
   margin: 0px;
+  padding-bottom: 10px;
 }
 .downarr-icon{
   font-size: 25px;

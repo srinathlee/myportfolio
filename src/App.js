@@ -17,6 +17,7 @@ import arrow from './assets/arrow.png'
 import Lottie from "lottie-react";
 import homelottie from "./assets/homelottie.json";
 import servicelottie from "./assets/servicelottie.json";
+import scrollotti from './assets/scrollotti.json'
 import contactlottie from "./assets/contactlottiee.json";
 import homelott from "./assets/serviceslloott.json";
 import {Button} from 'react-bootstrap'
@@ -162,9 +163,9 @@ function App() {
           </div>
         </div>
          <div className='scroll-section'>
-           <TfiMouse className='mouse-icon'/>
+         <Lottie className='scrollottie' animationData={scrollotti} loop={true} />
            <p className='scroll-para'>Scroll down</p>
-           <BsArrowDownShort className='downarr-icon'/>
+           
          </div>
         </div>
 
@@ -251,7 +252,7 @@ function App() {
                     <h1 className='p-wedget-heading'>Technologies Used</h1>
                     <motion.p animate={{rotate:[0,360]}} transition={{repeat:Infinity,duration:1}} className='settin-icon-container'> <IoIosSettings className='seting-icon'/></motion.p>
                     </div>
-                    <p  className='p-wedget-para'>React Js , CSS , Node Js , Express Js </p>
+                    <p  className='p-wedget-para'>HTML,CSS,JavaScript,ReactJs, </p>
 
                   </div>
                 
@@ -260,7 +261,7 @@ function App() {
                   <p className='project-description'>Built with cutting-edge technologies like React.js, Node.js, MongoDB, Express.js, and CSS, this Application offers a seamless and secure shopping experience,users can easily find the products that they like and can add to cart ,Shop like a pro, explore diverse categories, and enjoy a seamless, Amazon and Flipkart-inspired shopping experience. </p>
          
                    </div>
-                   <p  className='click-para'><a className='project-link' href='https://srinathemoji.ccbp.tech/' target='_blank'>click!</a> here for the project view</p>
+                   <p  className='click-para'><a className='project-link' href='https://srinathgame.netlify.app/' target='_blank'>click!</a> here for the project view</p>
                 </div>
             </div>
           </div>
